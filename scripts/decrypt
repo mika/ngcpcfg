@@ -34,7 +34,7 @@ console_output() {
 
 log_info() {
   logger -t ngcpcfg --id="${NGCPCFG_PID}" -- "$*"
-  console_output "$*\\n"
+  console_output "$*\n"
 }
 
 # info without ending newline
@@ -45,18 +45,18 @@ log_info_n() {
 
 log_warn() {
   logger -t ngcpcfg --id="${NGCPCFG_PID}" -- "Warning: $*"
-  console_output "Warning: $*\\n"
+  console_output "Warning: $*\n"
 }
 
 log_error() {
   logger -t ngcpcfg --id="${NGCPCFG_PID}" -- "Error: $*"
-  console_output "Error: $*\\n" >&2
+  console_output "Error: $*\n" >&2
 }
 
 log_debug() {
   if [ -n "${DEBUG:-}" ] ; then
     logger -t ngcpcfg --id="${NGCPCFG_PID}" -- "Debug: $*"
-    console_output "DEBUG: $*\\n"
+    console_output "DEBUG: $*\n"
   fi
 }
 # }}}

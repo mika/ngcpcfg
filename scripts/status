@@ -10,7 +10,7 @@ set -o pipefail
 FUNCTIONS="${FUNCTIONS:-/usr/share/ngcp-ngcpcfg/functions/}"
 
 if ! [ -r "${FUNCTIONS}"/main ] ; then
-  printf "Error: %s/main could not be read. Exiting.\\n" "${FUNCTIONS}">&2
+  printf "Error: %s/main could not be read. Exiting.\n" "${FUNCTIONS}">&2
   exit 1
 fi
 
@@ -28,7 +28,7 @@ fi
 usage() {
   printf "ngcpcfg status -- supported command line options:
 
---local-only - do not check state on any remote host(s) (HA/PRO only)\\n\\n"
+--local-only - do not check state on any remote host(s) (HA/PRO only)\n\\n"
 }
 
 # shellcheck disable=SC2034
